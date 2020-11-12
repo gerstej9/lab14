@@ -2,6 +2,11 @@
 
 Read the document in its entirety before beginning your lab. To view this lab assignment in its own tab, click [HERE](https://codefellows.github.io/code-201-guide/curriculum/class-14/lab/){:target="_blank"}
 
+## Contributors
+Alan Hung
+James Gerstenberger
+Nick Abramowicz
+
 ## Problem Domain
 
 The focus group results have been collected and the BusMall catalog is ready to be released! The results were so positive that the marketing team would also like to make these products available for online purchase. Your task is to bring functionality to an order form page and a shopping cart page.

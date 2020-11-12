@@ -1,5 +1,6 @@
 'use strict';
 
+var allProducts = [];
 // Cart constructor.
 var Cart = function(items) {
   // this.items is an array of CartItem instances.
@@ -8,6 +9,7 @@ var Cart = function(items) {
 
 Cart.prototype.addItem = function(product, quantity) {
   // TODO: Fill in this instance method to create a new CartItem and add it to this.items
+  this.items.push(product,quantity)
 };
 
 Cart.prototype.saveToLocalStorage = function() {
@@ -28,9 +30,9 @@ var CartItem = function(product, quantity) {
 var Product = function(filePath, name) {
   this.filePath = filePath;
   this.name = name;
-  Product.allProducts.push(this);
+  allProducts.push(this);
 };
-Product.allProducts = [];
+
 
 function generateCatalog() {
   new Product('assets/bag.jpg', 'Bag');
