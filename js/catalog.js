@@ -11,8 +11,10 @@ function populateForm() {
 
   //TODO: Add an <option> tag inside the form's select for each product
   var selectElement = document.getElementById('items');
-  for (var i in Product.allProducts) {
-
+  for (var i in allProducts) {
+    var createOption = document.createElement('option');
+    createOption.textContent = allProducts[i].name;
+    selectElement.appendChild(createOption);
   }
 
 }
@@ -32,12 +34,17 @@ function handleSubmit(event) {
 
 }
 
+var testItem;
 // TODO: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
   // TODO: suss out the item picked from the select list
   // TODO: get the quantity
   // TODO: using those, add one item to the Cart
+  var selectedItemEL = document.getElementById('catalog').nodeValue;
+  // var selectedItem = selectedItemEL.value;
+testItem = selectedItemEL;
 }
+// addSelectedItemToCart();
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
 function updateCounter() {}
