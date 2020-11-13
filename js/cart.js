@@ -37,10 +37,11 @@ function showCart() {
     tBody.appendChild(tableRowEl);
     tableDataEl = document.createElement('td');
     tableDataButton = document.createElement('button');
+    tableDataButton.setAttribute('id',`tde${i}`);
     tableDataButton.textContent = `X ${cart.items.items[i].product} ${cart.items.items[i].quantity}` 
     tableDataEl.appendChild(tableDataButton);
-    tableDataEl.setAttribute('id',`tde${i}`);
     tableRowEl.appendChild(tableDataEl);
+    tableDataButton.addEventListener('submit', removeItemFromCart);
   
   }
   // TODO: Create a TR
@@ -51,7 +52,6 @@ function showCart() {
 
 function removeItemFromCart(event) {
   event.preventDefault();
-  console.log(event.target);
   // TODO: When a delete link is clicked, use cart.removeItem to remove the correct item
   // TODO: Save the cart back to local storage
   // TODO: Re-draw the cart table
@@ -60,4 +60,4 @@ function removeItemFromCart(event) {
 
 // This will initialize the page and draw the cart on screen
 renderCart();
-tBody.addEventListener('click', removeItemFromCart);
+
